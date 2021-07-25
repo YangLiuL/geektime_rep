@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-hdfs-3.0.0-cdh6.3.1">
+    <CLASSES>
+      <root url="jar://D:/maven-jars/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.0.0-cdh6.3.1/hadoop-hdfs-3.0.0-cdh6.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

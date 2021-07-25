@@ -1,4 +1,7 @@
 RunJob.class
+PhoneReducer.class
+myrpc\MyRpcInterfaceImpl.class
 PhoneMapper.class
 FlowBean.class
-PhoneReducer.class
+myrpc\IMyRpcInterface.class
+myrpc\MyRpcClient.class

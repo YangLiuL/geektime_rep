@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-mapreduce-client-core-3.0.0-cdh6.3.1">
+    <CLASSES>
+      <root url="jar://D:/maven-jars/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/3.0.0-cdh6.3.1/hadoop-mapreduce-client-core-3.0.0-cdh6.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
