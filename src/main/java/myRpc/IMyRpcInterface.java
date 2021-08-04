@@ -1,4 +1,4 @@
-package myrpc;
+package myRpc;
 
 import org.apache.hadoop.ipc.VersionedProtocol;
 

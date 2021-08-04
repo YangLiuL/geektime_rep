@@ -6,13 +6,13 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class FlowBean implements Writable {
+public class flowBean implements Writable {
     private long upFlow;//上行流量
     private long downFlow;//下行流量
     private long sumFlow; //流量总和
 
     //必须要有，反序列化要调用空参构造器
-    public FlowBean() {
+    public flowBean() {
     }
 
     public long getUpFlow() {
@@ -23,7 +23,7 @@ public class FlowBean implements Writable {
         return downFlow;
     }
 
-    public FlowBean(long upFlow, long downFlow) {
+    public flowBean(long upFlow, long downFlow) {
         this.upFlow = upFlow;
         this.downFlow = downFlow;
         this.sumFlow = upFlow + downFlow;

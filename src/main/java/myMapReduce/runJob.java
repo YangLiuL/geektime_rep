@@ -7,21 +7,28 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import utils.myUtils;
 
-public class RunJob {
+public class runJob {
     public static void main(String[] args) {
+        //设置conf 配置
         Configuration config = new Configuration();
-        String inputFile ="/user/student/liuyang/input/HTTP_20130313143750.dat";
-        String outFile = "/user/student/liuyang/input/output";
+        //读取输入输出路径参数
+        myUtils.readProperties("geektime.properties");
+        String inputFile =myUtils.getProperty("hadoop.InputFilePath");
+        String outFile = myUtils.getProperty("hadoop.OutputFilePath");
+        String jobName =myUtils.getProperty("geektime.StduentNum");
+//        System.out.println(inputFile);
+//        System.out.println(outFile);
         try {
             FileSystem fileSystem = FileSystem.get(config);
             Job job = Job.getInstance(config);
-            job.setJobName("geektime_bigdata_ly");
-            job.setJarByClass(RunJob.class);
-            job.setMapperClass(PhoneMapper.class);
-            job.setReducerClass(PhoneReducer.class);
+            job.setJobName(jobName);
+            job.setJarByClass(runJob.class);
+            job.setMapperClass(phoneMapper.class);
+            job.setReducerClass(phoneReducer.class);
             job.setMapOutputKeyClass(Text.class);
-            job.setMapOutputValueClass(FlowBean.class);
+            job.setMapOutputValueClass(flowBean.class);
             FileInputFormat.setInputPaths(job, new Path(inputFile));
             Path output = new Path(outFile);
             if (fileSystem.exists(output)) {

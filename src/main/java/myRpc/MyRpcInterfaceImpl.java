@@ -1,4 +1,4 @@
-package myrpc;
+package myRpc;
 
 import org.apache.hadoop.ipc.ProtocolSignature;
 import org.apache.hadoop.ipc.Server;

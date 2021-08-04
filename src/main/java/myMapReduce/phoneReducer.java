@@ -5,14 +5,14 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class PhoneReducer extends Reducer<Text,FlowBean,Text,FlowBean>{
-    FlowBean flowBean = new FlowBean();
+public class phoneReducer extends Reducer<Text, myMapReduce.flowBean,Text, myMapReduce.flowBean>{
+    myMapReduce.flowBean flowBean = new flowBean();
     @Override
-    protected void reduce(Text key , Iterable<FlowBean>  FlowBeans ,Context context)
+    protected void reduce(Text key , Iterable<myMapReduce.flowBean>  FlowBeans , Context context)
             throws IOException, InterruptedException {
         long upSumFlow = 0;
         long downSumFlow =0;
-        for (FlowBean bean : FlowBeans) {
+        for (myMapReduce.flowBean bean : FlowBeans) {
             upSumFlow += bean.getUpFlow();
             downSumFlow += bean.getDownFlow();
         }

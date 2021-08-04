@@ -5,7 +5,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
-public class PhoneMapper extends Mapper<LongWritable, Text, Text, FlowBean>{
+public class phoneMapper extends Mapper<LongWritable, Text, Text, flowBean>{
     Text tKey = new Text();
     @Override
     protected void map(LongWritable key , Text value , Context context )
@@ -16,7 +16,7 @@ public class PhoneMapper extends Mapper<LongWritable, Text, Text, FlowBean>{
         long upFlow = Long.parseLong(fileds[fileds.length-3]);
         long downFlow = Long.parseLong(fileds[fileds.length-2]);
         tKey.set(phoNum);
-        FlowBean flowBean = new FlowBean(upFlow,downFlow);
+        flowBean flowBean = new flowBean(upFlow,downFlow);
         context.write(tKey,flowBean);
     }
 }

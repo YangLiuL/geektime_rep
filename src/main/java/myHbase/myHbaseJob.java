@@ -1,4 +1,4 @@
-package myhbase;
+package myHbase;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
@@ -7,8 +7,6 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class myHbaseJob {
