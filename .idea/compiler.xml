@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="geektime_bigdata_ly" />
+        <module name="spark_ly" />
       </profile>
     </annotationProcessing>
   </component>
